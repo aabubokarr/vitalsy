@@ -1,1 +1,1 @@
-Live : sydney-clinic.netlify.app
+Live : https://sydney-clinic.netlify.app/

@@ -15,10 +15,6 @@ body{
   background-color: #FAF9F6;
 }
 
-.home {
-  height: calc(100vh - 70px);
-}
-
 .poppins{
   font-family: 'Poppins';
 }

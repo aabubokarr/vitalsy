@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 export const Calculator = () => {
   const [formData, setFormData] = useState({
@@ -50,10 +51,22 @@ export const Calculator = () => {
   };
 
   return (
-    <div id="calculator" className="w-[500px] m-auto poppins">
-      <h1 className="text-center poppins font-bold text-[50px]">BMI Calculator</h1>
+    <div id="calculator" className="w-[340px] md:w-[500px] m-auto poppins mt-[100px]">
+      <motion.h1
+        initial={{ y: 15, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ ease: "linear", duration: 0.4, delay: 0 }}
+        className="text-center poppins font-bold text-[40px] md:text-[50px]"
+      >
+        BMI Calculator
+      </motion.h1>
       <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-        <div className="flex flex-col gap-1 text-[#009BA9] text-[16px] w-full">
+        <motion.div
+          initial={{ y: 15, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ ease: "linear", duration: 0.4, delay: 0.1 }}
+          className="flex flex-col gap-1 text-[#009BA9] text-[16px] w-full"
+        >
           <label htmlFor="weight" className="poppins">
             Weight (kg)
           </label>
@@ -66,8 +79,13 @@ export const Calculator = () => {
             placeholder="Weight (kg)"
             required
           />
-        </div>
-        <div className="flex flex-col gap-1 text-[#009BA9] text-[16px] w-full">
+        </motion.div>
+        <motion.div
+          initial={{ y: 15, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ ease: "linear", duration: 0.4, delay: 0.2 }}
+          className="flex flex-col gap-1 text-[#009BA9] text-[16px] w-full"
+        >
           <label htmlFor="height" className="poppins">
             Height (m)
           </label>
@@ -80,13 +98,16 @@ export const Calculator = () => {
             placeholder="Height (m)"
             required
           />
-        </div>
-        <button
+        </motion.div>
+        <motion.button
+          initial={{ y: 15, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ ease: "linear", duration: 0.4, delay: 0.3 }}
           type="submit"
           className="w-full h-[48px] cursor-pointer bg-[#298E9E] flex items-center justify-center text-white poppins font-medium rounded-lg"
         >
           Calculate BMI
-        </button>
+        </motion.button>
       </form>
       {bmi !== null && (
         <div
