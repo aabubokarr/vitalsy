@@ -47,34 +47,6 @@ export const Home = () => {
           </motion.p>
         </div>
       </div>
-      <div className="flex items-center gap-3 mt-3">
-        <motion.div
-          initial={{ y: 15, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ ease: "linear", duration: 0.4, delay: 0.4 }}
-        >
-          <Link
-            to="calculator"
-            offset={-70}
-            className="w-[130px] h-[48px] cursor-pointer bg-[#298E9E] flex items-center justify-center text-white poppins font-medium rounded-lg"
-          >
-            Calculate BMI
-          </Link>
-        </motion.div>
-        <motion.div
-          initial={{ y: 15, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ ease: "linear", duration: 0.4, delay: 0.5 }}
-        >
-          <Link
-            to="contact"
-            offset={-70}
-            className="w-[130px] h-[48px] cursor-pointer bg-[#298E9E] flex items-center justify-center text-white poppins font-medium rounded-lg"
-          >
-            Contact Us
-          </Link>
-        </motion.div>
-      </div>
     </div>
   );
 };
