@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import emailjs from "emailjs-com";
-import { motion } from "framer-motion";
+import { contactInfo } from "../../data";
+
 import { Send, CheckCircle, AlertCircle } from "lucide-react";
 import { Button } from "../ui/Button";
 
@@ -57,22 +58,19 @@ export const Contact = () => {
   return (
     <div id="contact" className="section-padding bg-gradient-to-b from-white to-blue-50">
       <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden md:flex">
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+        <div
           className="bg-primary p-12 text-white md:w-1/3 flex flex-col justify-between"
         >
           <div>
             <h3 className="text-2xl font-bold mb-4">Get in Touch</h3>
-            <p className="mb-6 opacity-90">We'd love to hear from you. Fill out the form and we'll be in touch as soon as possible.</p>
+            <p className="mb-6 opacity-90">We&apos;d love to hear from you. Fill out the form and we&apos;ll be in touch as soon as possible.</p>
           </div>
           <div className="space-y-4">
-            <p className="opacity-80">123 Health Street, Sydney NSW 2000</p>
-            <p className="opacity-80">+61 2 1234 5678</p>
-            <p className="opacity-80">contact@vitalsy.com</p>
+            <p className="opacity-80">{contactInfo.addressShort}</p>
+            <p className="opacity-80">{contactInfo.phone}</p>
+            <p className="opacity-80">{contactInfo.email}</p>
           </div>
-        </motion.div>
+        </div>
 
         <div className="p-12 md:w-2/3">
           <h2 className="text-2xl font-bold text-secondary mb-8">Send us a Message</h2>

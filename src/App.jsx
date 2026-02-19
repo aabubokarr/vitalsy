@@ -11,7 +11,7 @@ import { Footer } from "./components/Footer"
 function App() {
 
   return (
-    <div className="font-poppins bg-neutral">
+    <div className="font-poppins bg-neutral overflow-x-hidden">
       <Navbar />
       <Home />
       <Services />

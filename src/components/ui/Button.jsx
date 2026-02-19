@@ -1,5 +1,6 @@
-import React from "react";
-import { cn } from "../../lib/utils"; // Assuming you might add utility class merger later, but for now we'll stick to standard props
+
+import { cn } from "../../lib/utils";
+import PropTypes from "prop-types";
 
 export const Button = ({
     children,
@@ -8,23 +9,31 @@ export const Button = ({
     fullWidth = false,
     ...props
 }) => {
-    const baseStyles = "px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer";
+    const baseStyles = "px-6 py-3 rounded-lg font-medium flex items-center justify-center gap-2 cursor-pointer";
 
     const variants = {
-        primary: "bg-primary text-white hover:bg-accent hover:shadow-lg hover:-translate-y-0.5",
-        secondary: "bg-secondary text-white hover:bg-gray-800",
-        outline: "border-2 border-primary text-primary hover:bg-primary/5",
-        ghost: "text-gray-600 hover:text-primary hover:bg-gray-50",
+        primary: "bg-primary text-white",
+        secondary: "bg-secondary text-white",
+        outline: "border-2 border-primary text-primary",
+        ghost: "text-gray-600",
     };
 
     const widthClass = fullWidth ? "w-full" : "";
 
     // Helper to combine classes simply
-    const combinedClassName = `${baseStyles} ${variants[variant]} ${widthClass} ${className}`;
+    const combinedClassName = cn(baseStyles, variants[variant], widthClass, className);
 
     return (
         <button className={combinedClassName} {...props}>
             {children}
         </button>
     );
+
+};
+
+Button.propTypes = {
+    children: PropTypes.node.isRequired,
+    variant: PropTypes.oneOf(["primary", "secondary", "outline", "ghost"]),
+    className: PropTypes.string,
+    fullWidth: PropTypes.bool,
 };

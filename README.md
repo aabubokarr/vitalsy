@@ -1,11 +1,12 @@
 # VitalSy - Healthcare Clinic Website
 
-![VitalSy](public/home.png)
+![VitalSy](vitalsy.png)
 
-Welcome to the **VitalSy** project! This is a modern, responsive healthcare clinic website built with React and Tailwind CSS.
+Welcome to the **VitalSy** project! This README provides an overview of the project, setup instructions, and other relevant details.
 
 ## Table of Contents
 
+- [Visit](#visit)
 - [About](#about)
 - [Features](#features)
 - [Installation](#installation)
@@ -14,18 +15,23 @@ Welcome to the **VitalSy** project! This is a modern, responsive healthcare clin
 - [Contributing](#contributing)
 - [License](#license)
 
+## Visit
+
+- [Repository](https://github.com/aabubokarr/vitalsy.git)
+- [Website](https://vitalsy.netlify.app/)
+
 ## About
 
 **VitalSy** is a sleek and modern website template for healthcare clinics. It features a responsive design, booking system integration, service listings, and various health tools like a BMI calculator.
 
 ## Features
 
-- **Modern UI/UX**: Built with Glassmorphism and modern design principles.
-- **Responsive Design**: Fully responsive across mobile, tablet, and desktop.
-- **Interactive Elements**: Smooth scrolling, hover effects, and animations using Framer Motion.
-- **Health Tools**: Integrated BMI Calculator.
-- **Booking System**: Contact form with EmailJS integration.
-- **Iconography**: Using Lucide React for consistent and crisp icons.
+- Modern UI/UX
+- Responsive Design
+- Interactive Elements
+- Health Tools
+- Booking System
+- Iconography
 
 ## Installation
 
@@ -54,27 +60,31 @@ Welcome to the **VitalSy** project! This is a modern, responsive healthcare clin
 
 ```
 vitalsy/
-├── public/             # Static assets
-├── src/                # Source code
-│   ├── assets/         # Project assets (images, etc)
-│   ├── components/     # React components
-│   │   ├── sections/   # Application sections (Home, About, Services, etc)
-│   │   ├── ui/         # Reusable UI components (Button, etc)
-│   │   ├── Footer.jsx  # Global Footer
-│   │   └── Navbar.jsx  # Global Navbar
-│   ├── App.jsx         # Main application component
-│   ├── index.css       # Global styles and Tailwind directives
-│   └── main.jsx        # Entry point
-├── index.html          # HTML Entry point
-├── package.json        # Project metadata and dependencies
-└── tailwind.config.js  # Tailwind CSS configuration
+├── public/              # Static assets (favicon, etc)
+├── src/                 # Source code
+│   ├── assets/          # Project assets (images, etc)
+│   ├── components/      # React components
+│   │   ├── sections/    # Page sections (Home, About, Services, etc)
+│   │   ├── ui/          # Reusable UI components (Button, etc)
+│   │   ├── Footer.jsx   # Global Footer
+│   │   └── Navbar.jsx   # Global Navbar
+│   ├── data/            # Application data and constants
+│   │   └── index.jsx    # Central data store
+│   ├── lib/             # Utility functions and libraries
+│   │   └── utils.js     # Shared helper functions
+│   ├── App.jsx          # Main application component
+│   ├── index.css        # Global styles and Tailwind directives
+│   └── main.jsx         # Entry point
+├── index.html           # HTML Entry point
+├── package.json         # Project metadata and dependencies
+└── tailwind.config.js   # Tailwind CSS configuration
 ```
 
 ## Contributors
 
 <p align="center">
-  <a href="https://github.com/aabubokarr/triumph/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=aabubokarr/triumph" alt="Contributors" />
+  <a href="https://github.com/aabubokarr/vitalsy/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=aabubokarr/vitalsy" alt="Contributors" />
   </a>
 </p>
 

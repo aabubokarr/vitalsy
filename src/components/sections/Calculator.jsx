@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { useState } from "react";
+
 import { Calculator as CalcIcon } from "lucide-react";
 import { Button } from "../ui/Button";
 
@@ -53,29 +53,20 @@ export const Calculator = () => {
     <div id="calculator" className="section-padding bg-neutral">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+          <h2
             className="text-primary font-semibold tracking-wide uppercase"
           >
             Health Tools
-          </motion.h2>
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+          </h2>
+          <h1
             className="text-4xl font-bold mt-2 text-secondary"
           >
             BMI Calculator
-          </motion.h1>
+          </h1>
         </div>
 
         <div className="bg-white rounded-3xl shadow-xl overflow-hidden md:flex">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
             className="p-8 md:w-1/2 bg-primary text-white flex flex-col justify-center items-center text-center"
           >
             <CalcIcon size={64} className="mb-4 opacity-80" />
@@ -83,7 +74,7 @@ export const Calculator = () => {
             <p className="opacity-90">
               BMI is a useful screening tool that can estimate whether a person is underweight, healthy weight, overweight, or obese.
             </p>
-          </motion.div>
+          </div>
 
           <div className="p-8 md:w-1/2">
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -123,15 +114,13 @@ export const Calculator = () => {
             </form>
 
             {bmi && (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
+              <div
                 className={`mt-6 p-4 rounded-xl text-white text-center shadow-lg ${bgColor}`}
               >
                 <p className="text-sm opacity-90 uppercase tracking-wide font-semibold">Your BMI Score</p>
                 <h2 className="text-3xl font-bold my-1">{bmi}</h2>
                 <p className="font-medium">{category}</p>
-              </motion.div>
+              </div>
             )}
           </div>
         </div>
